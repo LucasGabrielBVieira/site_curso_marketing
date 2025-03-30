@@ -1,0 +1,18 @@
+.buttom {
+    max-width: 250px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px;
+    background: linear-gradient(to right, #6b148d, #a534e7);
+    box-shadow: 0px 0px 30px rgba(74, 51, 87, 0.5);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.bottom-txt {
+    color: #FFFFFF;
+    font-size: 14px;
+}
