@@ -5,11 +5,13 @@
     top: -20px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     align-items: center;
     justify-items: center;
     gap: 20px;
     max-width: 1500px;
-    padding: 80px;
+    padding-top: 50px;
+    padding-bottom: 30px;
 }
 
 .container-moldura {
@@ -32,20 +34,68 @@
 .point-1 {
     border: var(--primary-color) 2px solid;
     color: var(--primary-color);
+    box-shadow: none;
+    transition: all 0.3s ease;
+    transform: scale(1.05);
 }
 
 .point2 {
     border: var(--secondary-color) 2px solid;
     color: var(--secondary-color);
+    box-shadow: none;
+    transition: all 0.3s ease;
+    transform: scale(1.05);
 }
 
 .point3 {
     border: var(--border-color) 2px solid;
     color: var(--border-color);
+    box-shadow: none;
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+}
+
+.point-1:hover {
+    background-color: var(--primary-color);
+    color: #FFF;
+    box-shadow: #000 0px 0px 10px;
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+}
+
+.point2:hover {
+    background-color: var(--secondary-color);
+    color: #FFF;
+    box-shadow: #000 0px 0px 10px;
+    transition: all 0.3s ease;
+    transform: scale(1.05);
+}
+
+.point3:hover {
+    background-color: var(--border-color);
+    color: #FFF;
+    box-shadow: #000 0px 0px 10px;
+    transition: all 0.3s ease;
+    transform: scale(1.05);
 }
 
 .three-points-txt {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    gap: 50px;
+    align-items: space-between;
+    justify-content: center;
+    flex-direction: row;
     background-color: #FFF;
     font-size: 14px;
     color: var(--secondary-color);
+}
+
+.three-points-txt-p1 {
+    color: var(--primary-color);
+}
+
+.three-points-txt-p2 {
+    color: var(--border-color);
 }
