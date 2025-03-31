@@ -3,6 +3,7 @@ import TheePoints from './components/TheePoints'
 import Welcome from './components/Welcome'
 import './App.css'
 import Description from './components/Description'
+import SixPictures from './components/SixPictures'
 
 
 function App() {
@@ -10,10 +11,13 @@ function App() {
   return (
     <>
       <main className="container">
-        <Welcome/>
-        <TheePoints/>
+        <Welcome />
+        <TheePoints />
       </main>
-      <Description/>
+      <Description />
+      <div className='container-six-pictures'>
+        <SixPictures />
+      </div>
     </>
   )
 }
