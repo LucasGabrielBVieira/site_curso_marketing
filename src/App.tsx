@@ -2,6 +2,7 @@ import './App.css'
 import TheePoints from './components/TheePoints'
 import Welcome from './components/Welcome'
 import './App.css'
+import Description from './components/Description'
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Welcome/>
         <TheePoints/>
       </main>
+      <Description/>
     </>
   )
 }
