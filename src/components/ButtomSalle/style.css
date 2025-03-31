@@ -6,13 +6,18 @@
     align-items: center;
     flex-direction: row;
     padding: 10px;
-    background: linear-gradient(to right, #6b148d, #a534e7);
-    box-shadow: 0px 0px 30px rgba(74, 51, 87, 0.5);
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    box-shadow: var(--background-color) 0px 0px 10px;
     border-radius: 10px;
     cursor: pointer;
 }
 
 .bottom-txt {
     color: #FFFFFF;
+    font-size: 14px;
+}
+
+.bottom-strong {
+    color: var(--background-color);
     font-size: 14px;
 }

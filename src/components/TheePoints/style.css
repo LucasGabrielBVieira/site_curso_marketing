@@ -1,0 +1,51 @@
+.container-three-points {
+    background-color: #FFF;
+    position: relative;
+    z-index: 1;
+    top: -20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+    max-width: 1500px;
+    padding: 80px;
+}
+
+.container-moldura {
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 800;
+    flex-direction: column;
+}
+
+.container-moldura img {
+    width: 60px;
+    height: 60px;
+}
+
+.point-1 {
+    border: var(--primary-color) 2px solid;
+    color: var(--primary-color);
+}
+
+.point2 {
+    border: var(--secondary-color) 2px solid;
+    color: var(--secondary-color);
+}
+
+.point3 {
+    border: var(--border-color) 2px solid;
+    color: var(--border-color);
+}
+
+.three-points-txt {
+    background-color: #FFF;
+    font-size: 14px;
+    color: var(--secondary-color);
+}
