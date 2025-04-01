@@ -2,7 +2,7 @@
     background-color: #FFF;
     position: relative;
     z-index: 1;
-    top: -20px;
+    top: -21px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -58,7 +58,7 @@
 .point-1:hover {
     background-color: var(--primary-color);
     color: #FFF;
-    box-shadow: #000 0px 0px 10px;
+    box-shadow: var(--primary-color) 0px 0px 10px;
     transition: all 0.3s ease;
     transform: scale(1.05);
 }
@@ -66,7 +66,7 @@
 .point2:hover {
     background-color: var(--secondary-color);
     color: #FFF;
-    box-shadow: #000 0px 0px 10px;
+    box-shadow: var(--secondary-color) 0px 0px 10px;
     transition: all 0.3s ease;
     transform: scale(1.05);
 }
@@ -74,7 +74,7 @@
 .point3:hover {
     background-color: var(--border-color);
     color: #FFF;
-    box-shadow: #000 0px 0px 10px;
+    box-shadow: var(--border-color) 0px 0px 10px;
     transition: all 0.3s ease;
     transform: scale(1.05);
 }

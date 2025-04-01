@@ -6,6 +6,8 @@ import Description from './components/Description'
 import SixPictures from './components/SixPictures'
 import FichaTecnica from './components/FichaTecnica'
 import ConteudoCurso from './components/ConteudoCurso'
+import DescriptionBruno from './components/DescriptionBruno'
+import PerguntasFrequentes from './components/PerguntasFrequentes'
 
 
 function App() {
@@ -25,6 +27,12 @@ function App() {
       </div>
       <div>
         <ConteudoCurso />
+      </div>
+      <div>
+        <DescriptionBruno />
+      </div>
+      <div className='container-perguntas-frequentes-content'>
+        <PerguntasFrequentes />
       </div>
     </>
   )

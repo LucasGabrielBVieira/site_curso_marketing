@@ -1,0 +1,47 @@
+.section-descriptionBruno {
+    background-color: var(--primary-color);
+    position: relative;
+    bottom: -151px;
+    width: 99.2vw;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-descriptionBruno {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+}
+
+.container-descriptionBruno h2 {
+    font-size: 50px;
+    font-weight: 800;
+    color: var(--background-color);
+}
+
+.container-descriptionBruno h2 div {
+    font-size: 50px;
+    font-weight: 800;
+    color: var(--background-color);
+    background-color: var(--border-color);
+    display: inline-flex;
+    width: 360px;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+.container-descriptionBruno p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--background-color);
+}
+
+.container-descriptionBruno img {
+    width: 500px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    mask-mode: alpha;
+}

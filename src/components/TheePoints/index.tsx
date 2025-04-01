@@ -54,7 +54,7 @@ function TheePoints() {
                 </div>
                 <div onMouseMove={handleMouseEnterComunidade}
                     onMouseLeave={handleMouseLeaveComunidade}
-                    className='container-moldura point-1'>
+                    className='container-moldura point2'>
                     <img src={hoveredComunidade ? hoverComunidade : originalComunidade} alt="" />
                     <p>Comunidade VIP</p>
                 </div>

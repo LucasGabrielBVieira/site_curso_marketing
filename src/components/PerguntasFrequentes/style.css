@@ -1,0 +1,72 @@
+.container-perguntas-frequentes{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    max-width: 1200px;
+    gap: 20px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px;
+    height: 60vh;
+}
+
+.container-perguntas-frequentes h3 {
+    color: var(--background-color);
+    font-size: 56px;
+    font-weight: 600;
+    margin: 0;
+    max-width: 400px;
+}
+
+.container-perguntas-header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--background-color);
+    border: var(--border-color) 2px solid;
+    padding: 15px 20px;
+    border-radius: 90px;
+    margin-bottom: 20px;
+}
+
+.container-perguntas-header {
+    font-size: 20px;
+    display: flex;
+    justify-content: start;
+    padding: 15px 20px;
+    align-items: center;
+    cursor: pointer;
+    height: 20px;
+    width: 650px;
+    transition: all 0.8s ease;
+}
+
+.container-perguntas-header.active {
+    height: 20px;
+    transition: all 0.8s ease-in;
+    color: var(--border-color);
+    margin: 0;
+}
+
+.container-perguntas-content ul li {
+    list-style: none;
+    position: relative;
+    left: -23px;
+    color: var(--background-color);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.container-perguntas-content {
+    display: none;
+    transition: all 0.5s ease-in;
+}
+
+.container-perguntas-content.open {
+    display: inline-block;
+    max-height: 500px;
+    /* Altura máxima suficiente para o conteúdo */
+    opacity: 1;
+}
+
