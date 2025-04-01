@@ -6,8 +6,9 @@
     align-items: center;
     flex-direction: row;
     padding: 10px;
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
     box-shadow: var(--background-color) 0px 0px 10px;
+
+    background: linear-gradient(to right, var(--primary-color) ,var(--secondary-color));
     border-radius: 10px;
     cursor: pointer;
 }
@@ -19,5 +20,12 @@
 
 .bottom-strong {
     color: var(--background-color);
-    font-size: 14px;
+    font-size: 16px;
+}
+
+.buttom:hover {
+    transform: scale(1.01);
+    transition: all 0.5s ease;
+    box-shadow: var(--primary-color) 0px 0px 3px;
+    background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
 }

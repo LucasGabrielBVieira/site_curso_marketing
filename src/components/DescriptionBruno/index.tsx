@@ -1,5 +1,5 @@
 import './style.css';
-import montanha from '../../assets/montanha.png';
+import brunoImg from '../../assets/brunoimg.png';
 import { motion, useScroll, useTransform, Variants } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -30,8 +30,8 @@ const DescriptionBruno: React.FC = () => {
 
     const titleVariants: Variants = {
         hidden: { opacity: 0, x: -50 },
-        visible: { 
-            opacity: 1, 
+        visible: {
+            opacity: 1,
             x: 0,
             transition: {
                 duration: 0.6,
@@ -41,7 +41,7 @@ const DescriptionBruno: React.FC = () => {
     };
 
     return (
-        <motion.section 
+        <motion.section
             className='section-descriptionBruno'
             ref={sectionRef}
             initial={{ opacity: 0 }}
@@ -55,61 +55,39 @@ const DescriptionBruno: React.FC = () => {
                         initial="hidden"
                         animate={inView ? "visible" : "hidden"}
                     >
-                        Quem é Bruno Morais?
+                        Quem é Bruno Henrique Morais?
                     </motion.h2>
-                    
+
                     <motion.p className='descriptionBruno-txt'>
-                        <motion.span
+                        <motion.p
                             custom={0}
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
                             variants={textVariants}
                         >
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        </motion.span>
-                        
+                            Olá, sou Bruno Henrique Morais, designer gráfico e gestor comercial com 8 anos de experiência. Minha jornada começou com a paixão por criar e comunicar, mas logo percebi que saber criar era só uma parte do processo. Enfrentei muitos desafios, cometi erros e vi negócios promissores falharem por falta de direção e posicionamento no mercado. Aprendi a duras penas o que realmente fazia a diferença para estruturar um negócio de sucesso e atrair clientes de forma consistente.
+                        </motion.p>
+
                         <motion.p
                             custom={1}
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
                             variants={textVariants}
                         >
-                            Quisquam, voluptatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quisquam, voluptatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        </motion.p>
-                        
-                        <motion.p
-                            custom={2}
-                            initial="hidden"
-                            animate={inView ? "visible" : "hidden"}
-                            variants={textVariants}
-                        >
-                            Quisquam, voluptatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quisquam, voluptatibus!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, soluta laboriosam sequi doloribus magnam perspiciatis ab temporibus obcaecati, officiis explicabo id ex sint maiores. Dolores asperiores non praesentium itaque labore.
-                        </motion.p>
-                        
-                        <motion.p
-                            custom={3}
-                            initial="hidden"
-                            animate={inView ? "visible" : "hidden"}
-                            variants={textVariants}
-                        >
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia obcaecati cupiditate quisquam tenetur commodi. Temporibus odio optio et officiis quasi omnis doloremque distinctio alias numquam, commodi ea earum quod delectus!
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores atque, velit eos fuga vitae in aut accusantium quis. Possimus voluptate repellendus natus perferendis corporis officiis magnam hic, voluptas exercitationem quis?
+                            Com esse aprendizado, desenvolvi o Treinamento ELEVAR: um método prático e acessível, pensado para quem quer começar do jeito certo e evitar os erros que cometi. Aqui, compartilho tudo o que aprendi sobre construção de base sólida, posicionamento estratégico e como usar ferramentas para aumentar a visibilidade e as vendas. Além disso, utilizei esse mesmo conhecimento dentro da minha empresa, onde entrego soluções de marketing para outras empresas, aplicando as estratégias otimizadas baseadas no que ensino no treinamento. Se você está pronto para transformar esforço em resultados, estou aqui para te guiar nessa jornada.
                         </motion.p>
                     </motion.p>
                 </div>
-                
+
                 <motion.div
-                    style={{ 
+                    style={{
                         opacity: imgOpacity,
                     }}
                     transition={{ duration: 0.3 }}
                 >
-                    <motion.img 
-                        src={montanha} 
-                        alt="Montanha" 
+                    <motion.img
+                        src={brunoImg}
+                        alt="Montanha"
                         initial={{ opacity: 0, y: 30 }}
                         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                         transition={{ duration: 0.8, delay: 0.5 }}

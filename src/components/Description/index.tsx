@@ -30,8 +30,8 @@ const Description: React.FC = () => {
 
     const titleVariants: Variants = {
         hidden: { opacity: 0, x: -50 },
-        visible: { 
-            opacity: 1, 
+        visible: {
+            opacity: 1,
             x: 0,
             transition: {
                 duration: 0.6,
@@ -42,8 +42,8 @@ const Description: React.FC = () => {
 
     const highlightVariants: Variants = {
         hidden: { opacity: 0, scale: 0.9 },
-        visible: { 
-            opacity: 1, 
+        visible: {
+            opacity: 1,
             scale: 1,
             transition: {
                 delay: 0.3,
@@ -54,7 +54,7 @@ const Description: React.FC = () => {
     };
 
     return (
-        <motion.section 
+        <motion.section
             className='section-description'
             ref={sectionRef}
             initial={{ opacity: 0 }}
@@ -68,16 +68,16 @@ const Description: React.FC = () => {
                         initial="hidden"
                         animate={inView ? "visible" : "hidden"}
                     >
-                        O melhor curso pelo {" "}
+                        TREINAMENTO ELEVAR {" "}
                         <motion.div
                             variants={highlightVariants}
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
                         >
-                            menor preço
+                            Da Estruturação a Escála
                         </motion.div>
                     </motion.h2>
-                    
+
                     <motion.p className='description-txt'>
                         <motion.span
                             custom={0}
@@ -85,61 +85,59 @@ const Description: React.FC = () => {
                             animate={inView ? "visible" : "hidden"}
                             variants={textVariants}
                         >
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Você sente que, por mais que se esforce, seu negócio ainda não alcançou o reconhecimento e as vendas que merece? Está começando agora e não sabe por onde iniciar para criar um negócio sólido e visível no mercado? <br/> <br />
+                            Eu sei exatamente como é essa sensação. Foi por isso que criei o Treinamento ELEVAR, um método testado e comprovado que guia você, passo a passo, para estruturar seu negócio, se posicionar no digital e atrair clientes de forma consistente – tudo isso sem precisar ser um especialista ou investir rios de dinheiro. <br /> <br />
+                            Com um método direto e ferramentas acessíveis, você aprenderá a:
                         </motion.span>
-                        
+
                         <motion.p
                             custom={1}
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
                             variants={textVariants}
                         >
-                            Quisquam, voluptatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quisquam, voluptatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            <div>✅ Criar um negócio sólido desde a base</div> – Defina um posicionamento forte e uma proposta de valor diferenciada que fará seu cliente escolher você ao invés da concorrência.
                         </motion.p>
-                        
+
                         <motion.p
                             custom={2}
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
                             variants={textVariants}
                         >
-                            Quisquam, voluptatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quisquam, voluptatibus!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, soluta laboriosam sequi doloribus magnam perspiciatis ab temporibus obcaecati, officiis explicabo id ex sint maiores. Dolores asperiores non praesentium itaque labore.
+                            <div>✅ Construir sua presença digital profissional</div> – Tenha um site estratégico, redes sociais otimizadas e uma identidade visual que transmita autoridade.
                         </motion.p>
-                        
+
                         <motion.p
                             custom={3}
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
                             variants={textVariants}
                         >
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia obcaecati cupiditate quisquam tenetur commodi. Temporibus odio optio et officiis quasi omnis doloremque distinctio alias numquam, commodi ea earum quod delectus!
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores atque, velit eos fuga vitae in aut accusantium quis. Possimus voluptate repellendus natus perferendis corporis officiis magnam hic, voluptas exercitationem quis?
+                            <div>✅ Atrair clientes todos os dias, com ou sem investimento</div> – Descubra como gerar tráfego qualificado através de anúncios no Meta Ads ou estratégias gratuitas de marketing orgânico.
                         </motion.p>
-                        
+
                         <motion.p
                             custom={4}
                             initial="hidden"
                             animate={inView ? "visible" : "hidden"}
                             variants={textVariants}
                         >
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum praesentium odit error optio, perspiciatis, ducimus consequatur debitis eum voluptatum quasi nesciunt qui vitae deserunt aperiam expedita odio? Repellat, inventore in.
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur ipsam vero dolor illo quasi necessitatibus odio velit? Eaque magnam itaque quia aspernatur voluptatibus, porro error accusantium et asperiores est facilis?
+                            <div>✅ Converter seguidores e visitantes em compradores</div> – Use técnicas de copywriting, gatilhos mentais e automação para transformar interesse em vendas reais. <br/> <br />
+                            <div>✅ Escalar e manter seu crescimento no longo prazo</div> – Aplique estratégias de planejamento para continuar expandindo seu negócio de forma sustentável.
                         </motion.p>
                     </motion.p>
                 </div>
-                
+
                 <motion.div
-                    style={{ 
+                    style={{
                         opacity: imgOpacity,
                     }}
                     transition={{ duration: 0.3 }}
                 >
-                    <motion.img 
-                        src={montanha} 
-                        alt="Montanha" 
+                    <motion.img
+                        src={montanha}
+                        alt="Montanha"
                         initial={{ opacity: 0, y: 30 }}
                         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                         transition={{ duration: 0.8, delay: 0.5 }}

@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect, FC } from "react";
 import { motion, useAnimation, AnimationControls, Variants } from 'framer-motion';
 import "./style.css";
+import BigButtomSalleGold from "../BigButtomSalleGold";
 
 type Modulo = {
     id: number;
@@ -85,6 +86,7 @@ const PerguntasFrequentes: FC = () => {
     };
 
     return (
+        <>
         <motion.div 
             className="container-perguntas-frequentes"
             ref={ref}
@@ -116,7 +118,12 @@ const PerguntasFrequentes: FC = () => {
                     </div>
                 ))}
             </div>
+            
         </motion.div>
+        <div className="container-perguntas-frequentes-btn">
+            <BigButtomSalleGold/>
+        </div>
+        </>
     );
 }
 

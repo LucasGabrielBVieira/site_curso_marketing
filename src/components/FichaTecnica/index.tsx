@@ -5,7 +5,7 @@ import { useEffect, useRef, FC } from 'react'
 const FichaTecnica: FC = () => {
     const ref = useRef<HTMLDivElement>(null)
     const controls: AnimationControls = useAnimation()
-    
+
     // Check if element is in view
     useEffect(() => {
         const checkIfInView = (): void => {
@@ -13,25 +13,25 @@ const FichaTecnica: FC = () => {
             const element: HTMLDivElement = ref.current
             const rect: DOMRect = element.getBoundingClientRect()
             const windowHeight: number = window.innerHeight
-            
+
             // If the top of the element is in view
             if (rect.top <= windowHeight * 0.75) {
                 controls.start("visible")
             }
         }
-        
+
         window.addEventListener("scroll", checkIfInView)
         // Check once on mount
         checkIfInView()
-        
+
         return () => {
             window.removeEventListener("scroll", checkIfInView)
         }
     }, [controls])
-    
+
     // Animation variants - apenas fade in, sem movimento
     const containerVariants: Variants = {
-        hidden: { 
+        hidden: {
             opacity: 0
         },
         visible: {
@@ -42,38 +42,40 @@ const FichaTecnica: FC = () => {
             }
         }
     }
-    
+
     return (
-        <motion.div 
+        <motion.div
             className="container-ficha-tecnica"
             ref={ref}
             initial="hidden"
             animate={controls}
             variants={containerVariants}
         >
-            <h3>Ficha Técnica</h3>
-            <h4>Esta es la ficha técnica del producto.</h4>
+            <h3>Informações</h3>
+            <h4>Requitos</h4>
             <div className="ficha-tecnica-content">
-                <h5>Nombre del producto</h5>
+                <h5>Para quem é o Treinamento?</h5>
                 <ul>
-                    <li>Nombre 1</li>
-                    <li>Nombre 2</li>
-                    <li>Nombre 3</li>
-                    <li>Nombre 4</li>
+                    <li>MEI</li>
+                    <li>AUTONÔMOS</li>
+                    <li>COMERCIANTES LOCAIS</li>
+                    <li>INFOPRODUTORES</li>
+                    <li>DONOS DE PEQUENOS NEGÓCIOS</li>
+                    <li>PEQUENAS EMPRESAS</li>
+                    <li>EMPREENDEDORES NO GERAL</li>
                 </ul>
-                <h5>Precio</h5>
+                <h5>PRÉ-REQUISITOS</h5>
                 <ul>
-                    <li>Precio 1</li>
-                    <li>Precio 2</li>
-                    <li>Precio 3</li>
-                    <li>Precio 4</li>
+                    <li>OBTER UM COMPUTADOR OU NOTBOOK DE ESCRITÓRIO PARA EXECUÇÃO DAS FERRAMENTAS E ACESSO AS MESMAS</li>
                 </ul>
-                <h5>Características</h5>
+                <h5>O QUE VOCÊ VAI APRENDER</h5>
                 <ul>
-                    <li>Característica 1</li>
-                    <li>Característica 2</li>
-                    <li>Característica 3</li>
-                    <li>Característica 4</li>
+                    <li>Posicionar e Estruturar seu Negócio/Produto (Construindo um negócio sólido desde a base)</li>
+                    <li>Estruturar seu Negócio Online (Do zero ou otimizando o que já existe)</li>
+                    <li>Fazer seus Primeiros Anúncios e incluir estratégias de Marketing (Gerando tráfego qualificado com ou sem dinheiro)</li>
+                    <li>Converter Engajamento em Vendas (Transformando seguidores em clientes fiéis)</li>
+                    <li>Estratégia ELEVAR para suas Primeiras Campanhas (O passo a passo para seu primeiro faturamento online)</li>
+                    <li>Planejamento Estratégico para Crescimento Contínuo (Manutenção e crescimento do seu negócio no longo prazo)</li>
                 </ul>
             </div>
         </motion.div>

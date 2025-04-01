@@ -86,12 +86,12 @@ function SixPictures() {
 
                 <div className='container-six-pictures-grid' ref={containerRef}>
                     {[
-                        { title: "Thilha de aulas gravadas", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptas totam dolore quia fugit doloremque libero! Dolorum est quidem laboriosam in ut iusto ab, deserunt, excepturi quibusdam recusandae veniam accusantium!" },
-                        { title: "Materiais de apoio", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet placeat id molestias necessitatibus, dolore aliquam delectus tempore doloremque, expedita incidunt corporis ratione perspiciatis distinctio, asperiores pariatur architecto excepturi iste provident?" },
-                        { title: "Suporte dos Instrutores", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, inventore magni, velit voluptates dolores maxime a blanditiis adipisci recusandae nihil quod nulla sit at, quae dolore deserunt. Laudantium, ut dicta?" },
-                        { title: "Exercícios Práticos", content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi impedit recusandae nisi quia vero, ullam, quasi voluptatibus eveniet distinctio odio labore est placeat! Facilis laborum, consectetur maiores nulla possimus mollitia!" },
-                        { title: "Desafio com correção", content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate incidunt impedit odit omnis veniam! Deserunt rem, exercitationem eius amet cum repellat tenetur eum laboriosam suscipit inventore, nemo consequuntur omnis ut." },
-                        { title: "Certificado 30h", content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam explicabo voluptatem dolor, ea earum est facere tempore. Nam in eveniet vero maiores aliquam. Accusantium labore mollitia vitae, dicta illum sit." }
+                        { title: "Aulas 100% Gravadas e Práticas", content: "Aprenda no seu ritmo com aulas dinâmicas e diretas ao ponto, focadas em aplicação real no seu negócio. Assista quantas vezes quiser!" },
+                        { title: "Materiais Exclusivos de Apoio", content: "Guias estratégicos, checklists e ferramentas para aplicar cada ensinamento na prática e acelerar seus resultados." },
+                        { title: "Suporte dos Suporte Direto e Comunidade", content: "Tire dúvidas e interaja com outros empreendedores dentro de uma comunidade ativa, recebendo suporte para cada etapa da sua jornada." },
+                        { title: "Exercícios Execução Passo a Passo", content: "Nada de teoria vazia! Cada módulo tem tarefas práticas para você estruturar, posicionar e expandir seu negócio com estratégias testadas." },
+                        { title: "Estratégias Validadas para Vendas", content: "Aprenda técnicas de tráfego pago e gratuito, copywriting e persuasão para transformar seguidores e visitantes em clientes reais." },
+                        { title: "Ferramentas Atualizadas do Mercado", content: "Domine as melhores ferramentas, como ChatGPT, Canva, Meta Ads, Notion e muito mais, para otimizar e automatizar seu crescimento." }
                     ].map((item, index) => (
                         <motion.div
                             key={index}

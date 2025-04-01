@@ -23,7 +23,9 @@
 }
 
 .promocao-txt {
-    font-size: 14px;
+    margin-top: 8px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 .img-logo {

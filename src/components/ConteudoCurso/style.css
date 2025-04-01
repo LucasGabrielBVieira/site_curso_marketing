@@ -120,6 +120,10 @@ container-modulo-header-icon {
     margin: 0;
 }
 
+.container-modulo-aulas ul li {
+    padding: 5px 0;
+}
+
 .container-modulo-aulas ul li::before {
     content: "-  ";
     font-weight: 800;

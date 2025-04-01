@@ -1,0 +1,32 @@
+.big-buttom-salle-gold {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 680px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    border: var(--border-color) 2px solid;
+    box-shadow: var(--secondary-color) 0px 0px 2px;
+    color: var(--background-color);
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.big-buttom-salle-gold:hover {
+    transform: scale(1.01);
+    transition: all 0.1s ease;  
+    box-shadow: var(--primary-color) 0px 0px 10px;
+    background-color: var(--border-color);
+}
+
+.big-buttom-salle-gold p {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--background-color);
+}
+
+.big-buttom-salle-gold p span {
+    font-weight: 800;
+}
