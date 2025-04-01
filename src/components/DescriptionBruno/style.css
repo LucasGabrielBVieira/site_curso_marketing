@@ -1,5 +1,8 @@
 .section-descriptionBruno {
     background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     bottom: -151px;
     width: 99.2vw;
@@ -35,4 +38,42 @@
     border-bottom-left-radius: 15px;
     mask-mode: alpha;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), 80%, rgba(0, 0, 0, 0) 98%);
+}
+
+@media (max-width: 1500px) {
+    .container-descriptionBruno {
+        max-width: 1100px;
+        gap: 100px;
+    }
+    
+    .container-descriptionBruno h2 {
+        font-size: 40px;
+    }
+    
+    .descriptionBruno-txt p {
+        font-size: 20px;
+    }
+    
+    .container-descriptionBruno img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 1250px) {
+    .container-descriptionBruno {
+        max-width: 900px;
+        gap: 100px;
+    }
+    
+    .container-descriptionBruno h2 {
+        font-size: 34px;
+    }
+    
+    .descriptionBruno-txt p {
+        font-size: 16px;
+    }
+    
+    .container-descriptionBruno img {
+        width: 300px;
+    }
 }

@@ -16,6 +16,7 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     height: 70vh;
+    
 }
 
 .boas-vindas-txt {
@@ -31,6 +32,11 @@
 .img-logo {
     width: 800px;
     height: 200px;
+     
+    @media (max-width: 1500px) {
+        max-width: 600px;
+        width: 100%;
+    }
 }
 
 .img-icone{
@@ -43,10 +49,4 @@
     margin-right: 10px;
 }
 
-.img-container {
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 20px;
-    border-radius: 90px;
-     /* Garante que a transparência funcione corretamente */
-}
+

@@ -99,3 +99,11 @@
 .three-points-txt-p2 {
     color: var(--border-color);
 }
+
+@media (max-width: 1250px) {
+    .three-points-txt {
+        display: flex;
+        gap:10px;
+        flex-direction: column;
+    }
+}
