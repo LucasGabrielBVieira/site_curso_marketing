@@ -4,6 +4,8 @@ import Welcome from './components/Welcome'
 import './App.css'
 import Description from './components/Description'
 import SixPictures from './components/SixPictures'
+import FichaTecnica from './components/FichaTecnica'
+import ConteudoCurso from './components/ConteudoCurso'
 
 
 function App() {
@@ -17,6 +19,12 @@ function App() {
       <Description />
       <div className='container-six-pictures'>
         <SixPictures />
+      </div>
+      <div>
+        <FichaTecnica />
+      </div>
+      <div>
+        <ConteudoCurso />
       </div>
     </>
   )

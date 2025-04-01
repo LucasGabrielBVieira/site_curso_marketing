@@ -1,0 +1,140 @@
+.container-conteudo-curso {
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+    bottom: -151px;
+}
+
+.container-conteudo-curso-containt {
+    background-color: var(--background-color);
+    display: flex;
+    width: 700px;
+    flex-direction: column;
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+    bottom: -11px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.container-modulo {
+    border-bottom: none;
+    background-color: var(background-color);
+}
+.container-conteudo-curso h3 {
+    margin-bottom: 5px;
+    margin-top: 50px;
+    font-size: 18px;
+    color: var(--primary-color);
+}
+.container-conteudo-curso h4 {
+    color: var(--secondary-colo);
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.container-modulo-header h5 {
+    color: var(--primary-color);
+    margin-top: 5px;
+    font-size: 20px;
+    margin: 0;
+}
+
+.container-modulo p {
+    font-size: 16px;
+    color: var(--secondary-color-2);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.container-modulo-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container-modulo-header:hover {
+    background-color: var(--primary-color-2);
+    transition: background-color 0.3s ease;
+}
+
+.container-modulo-header.active {
+    background-color: var(--primary-color);
+    color: #FFF;
+    transition: background-color 0.5s ease;
+}
+
+.container-modulo-header.active h5 {
+    color: #FFF;
+}
+
+container-modulo-header-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-modulo-header-icon span::before {
+    content: "⮟";
+    padding: 20px;
+    font-size: 20px;
+    color: var(--primary-color);
+}
+.container-modulo-header-icon.active span::before {
+    content: "⮝";
+    transition: transform 0.3s ease;
+    color: #FFF;
+}
+
+.container-modulo-aulas {
+    transition: max-height 0.2s ease-in-out;
+    background-color: var(--secondary-color-2);
+    border: var(--primary-color) 2px solid;
+}
+
+
+
+.container-modulo-aulas.open {
+    max-height: 500px;
+    /* Altura máxima suficiente para o conteúdo */
+    opacity: 1;
+}
+
+.container-modulo-aulas ul {
+    background-color: var(--secondary-color-2);
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+}
+
+.container-modulo-aulas ul li::before {
+    content: "-  ";
+    font-weight: 800;
+}
+
+.container-modulo-aulas {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+/* Estilo para o cabeçalho do módulo ativo 
+
+  
+  
+  
+  .container-modulo-header {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+*/

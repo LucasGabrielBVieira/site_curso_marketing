@@ -1,0 +1,71 @@
+.container-ficha-tecnica {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px;
+    max-width: 98vw;
+    margin: 0 auto;
+    position: relative;
+    bottom: -151px;
+    background: radial-gradient(circle at top right, #003D5B, #000000);;
+}
+
+.container-ficha-tecnica h3 {
+    color: var(--background-color);
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0;
+}
+
+.container-ficha-tecnica h4 {
+    color: var(--background-color);
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.ficha-tecnica-content {
+    background-color: var(--secundary-color);
+    padding: 40px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 600px;
+    border: var(--primary-color) 2px solid;
+    border-radius: 10px;
+    box-shadow: #000 0px 0px 10px;
+}
+
+.ficha-tecnica-content h5 {
+    color: var(--background-color);
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.ficha-tecnica-content ul {
+    margin: 0 0 30px 0;
+}
+
+.ficha-tecnica-content li {
+    list-style: none;
+    position: relative;
+    left: -23px;
+    color: var(--background-color);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.ficha-tecnica-content li::before {
+    content: "-";
+    color: var(--background-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+

@@ -2,8 +2,9 @@
 :root {
     --primary-color: #003D5B;
     --secondary-color: #333333;
-    --border-color: #c7a900;
+    --border-color: #FFC107; 
     --background-color: #FAFAFA;
+    --primary-color-2: #003d5b09;
     --font-primary: 'Archivo', sans-serif;
 }
 
