@@ -17,8 +17,8 @@ function App() {
       <main className="container">
         <Welcome />
         <TheePoints />
+        <Description />
       </main>
-      <Description />
       <div className='container-six-pictures'>
         <SixPictures />
       </div>
@@ -34,6 +34,7 @@ function App() {
       <div className='container-perguntas-frequentes-content'>
         <PerguntasFrequentes />
       </div>
+      
     </>
   )
 }

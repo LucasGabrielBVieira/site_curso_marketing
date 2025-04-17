@@ -10,12 +10,19 @@
     --font-secondary: 'Lato', sans-serif;
 }
 
-body {
+
+  
+  * {
+    box-sizing: border-box;
+  }
+
+body, html {
     background-color: var(--background-color);
     color: var(--secondary-color);
     margin: 0;
     padding: 0;
-    
+    overflow-x: hidden;
+    width: 100vw;
     @media(max-width: 1024px) {
         background-color: var(--primary-color);
     }
