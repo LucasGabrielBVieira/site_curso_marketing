@@ -21,6 +21,7 @@
 
   .promocao-txt-p {
     text-align: center;
+    font-size: 16px;
   }
   
   .boas-vindas-txt {
@@ -59,7 +60,7 @@
   
   .promocao-txt {
     margin-top: 8px;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
   }
   
