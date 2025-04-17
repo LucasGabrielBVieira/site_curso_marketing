@@ -15,51 +15,57 @@ const modulos: Modulo[] = [
         id: 1,
         nome: "Módulo 1",
         descricao: "Elevando sua Base – Posicionamento e Estruturação do Negócio (Construindo um negócio sólido desde a base)",
-        aulas: ["O Primeiro Passo para se ELEVAR – O que é posicionamento de mercado e como aplicá-lo ao seu nicho.",
-            "Construindo sua Identidade Única – Como criar uma proposta de valor diferenciada para atrair clientes.",
-            "Segredo das Grandes Marcas – Criando uma oferta irresistível que converte.",
-            "Fundamentos Empresariais para Pequenos Negócios – Estruturando um negócio lucrativo e escalável."]
-    },
-    {
+        aulas: [
+          "O Primeiro Passo para se ELEVAR – Como se Posicionar no Mercado",
+          "Construindo sua Identidade Única – Criando uma Proposta de Valor Poderosa",
+          "O Segredo das Grandes Marcas – Como Criar uma Oferta Irresistível",
+          "Fundamentos Empresariais – Estruturando um Negócio Lucrativo e Escalável"
+        ]
+      },
+      {
         id: 2,
         nome: "Módulo 2",
-        descricao: "Elevando sua Presença Digital – Estruturando seu Negócio Online (Do zero ou otimizando o que já existe)",
-        aulas: ["A Primeira Impressão é a que Fica – Criando uma identidade visual profissional.",
-            "A Consistência é a Chave – Desenvolvendo um guia de identidade para redes sociais e site.",
-            "Seu Espaço no Digital – Criando um site estratégico para conversão.",
-            "Conectando-se com o Mundo – Criando e otimizando suas redes sociais para vendas."]
-    },
-    {
+        descricao: "Elevando sua Presença Digital – Estruturando seu Negócio Online (Criando uma presença digital profissional e estratégica)",
+        aulas: [
+          "Comece com o Pé Direito – E-mail Profissional e Preparação Inicial",
+          "Clareza na Estratégia – Definindo seu Posicionamento com Apoio da IA",
+          "Sua Marca Começa Aqui – Fundamentos da Identidade Visual",
+          "Ferramenta de Design na Prática – Primeiros Passos no Visual",
+          "Construindo sua Marca – Logo e Guia Visual do Zero",
+          "Entrando no Digital – Criando a Base do seu Site",
+          "Explorando Recursos Visuais – Ajustes e Elementos de Página",
+          "Site Estratégico – Estrutura Profissional do Zero",
+          "Otimização de Presença – Ajustes para Negócios e Lojas",
+          "Pronto para o Mundo – Conectando Domínio e Publicando",
+          "Sua Marca nas Redes – Criação de Perfis Profissionais",
+          "Perfil Estratégico – Configuração para Atrair e Vender"
+        ]
+      },
+      {
         id: 3,
         nome: "Módulo 3",
-        descricao: "Elevando sua Visibilidade – Seus Primeiros Anúncios e Estratégia de Marketing (Gerando tráfego qualificado com ou sem dinheiro)",
-        aulas: ["O Poder da Publicidade Digital – Como funciona o Meta Ads e por que investir nele.",
-            "Estruturando sua Máquina de Crescimento – Configurando sua conta e instalando pixels.",
-            "Seu Primeiro Passo no Tráfego Pago – Criando uma campanha de alto impacto.",
-            "Marketing Orgânico e Tráfego Gratuito – Como gerar vendas sem investir em anúncios."]
-    },
-    {
+        descricao: "Elevando sua Visibilidade - Impulsionando seu alcance nos meios digitais (Estratégias para aumentar sua visibilidade e atrair clientes)",
+        aulas: [
+          "Entendendo o Jogo – Fundamentos do Tráfego que Gera Resultado",
+          "Estrutura Profissional – Criando e Configurando sua Conta de Anúncios",
+          "Monitoramento Inteligente – Rastreamento e Métricas de Conversão",
+          "Comece a Anunciar – Configurando sua Primeira Campanha",
+          "Visibilidade Sem Investir – Estratégia de Tráfego Orgânico com Clareza",
+          "Conteúdos que Conectam – Criando Posts Visuais Estratégicos",
+          "Postando com Propósito – Publicação e Configuração Otimizada",
+          "Criativos que Convertem – Planejando Anúncios com Apoio da IA"
+        ]
+      },
+      {
         id: 4,
         nome: "Módulo 4",
-        descricao: "Elevando seu Faturamento – Convertendo Engajamento em Vendas (Transformando seguidores em clientes fiéis)",
-        aulas: ["Transformando Interesse em Compra – Entendendo a jornada do cliente.",
-            "A Arte da Persuasão – Como usar gatilhos mentais e técnicas de copywriting para vender mais.",
-            "Técnicas de Vendas para Negócios Digitais e Locais – Estratégias aplicáveis para qualquer tipo de negócio."]
-    },
-    {
-        id: 5,
-        nome: "Módulo 5",
-        descricao: "Estratégia ELEVAR para suas Primeiras Campanhas (O passo a passo para seu primeiro faturamento online)",
-        aulas: ["O Caminho Certo para Começar – Como estruturar sua primeira campanha de sucesso.",
-            "Aprimorando seus Resultados – Como otimizar e escalar suas campanhas de anúncios."]
-    },
-    {
-        id: 6,
-        nome: "Módulo 6",
-        descricao: "Bônus – Planejamento Estratégico para Crescimento Contínuo (Manutenção e crescimento do seu negócio no longo prazo)",
-        aulas: ["Construindo um Negócio Sólido – Criando um plano estratégico sustentável.",
-            "Crescendo sem Limites – Como se adaptar às mudanças do mercado e escalar seu negócio."]
-    }
+        descricao: "Bônus – Estratégia ELEVAR para suas Primeiras Campanhas e Crescimento Contínuo (Aplicando as estratégias na prática e otimizando resultados)",
+        aulas: [
+          "Primeiras Campanhas no Ar – Testando Criativos, Públicos e Gerando Conversões",
+          "Otimizando para Escalar – Públicos Estratégicos e Estrutura Inteligente",
+          "Conclusão e Próximos Passos – O Caminho para Continuar Elevando seus Resultados"
+        ]
+      }
 ]
 
 const ConteudoCurso: FC = () => {

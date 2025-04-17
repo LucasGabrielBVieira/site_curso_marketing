@@ -8,7 +8,7 @@ function ButtomSalle() {
         <button className='buttom'>
           <span className='buttom-glow'></span>
           <span className='buttom-content'>
-            <p className='bottom-txt'>Quero me <strong className='bottom-strong'>inscrever agora</strong></p>
+            <p className='bottom-txt'>Quero me <strong className='bottom-strong'>ELEVAR agora</strong></p>
           </span>
         </button>
       </div>

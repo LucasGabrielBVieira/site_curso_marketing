@@ -11,23 +11,34 @@ type Modulo = {
 const modulos: Modulo[] = [
     {
         id: 1,
-        pergunta: "Como funciona o curso?",
-        resposta: "O curso é online e você pode assistir as aulas a qualquer momento."
+        pergunta: "Como funciona a garantia?",
+        resposta: "Oferecemos 7 dias de garantia incondicional. Se você não ficar satisfeito, devolvemos 100% do seu investimento."
     },
     {
         id: 2,
-        pergunta: "Qual a duração do curso?",
-        resposta: "O curso tem duração de 3 meses."
+        pergunta: "Preciso ter experiência prévia?",
+        resposta: "Não! O treinamento foi desenvolvido pensando em iniciantes e inclui todo o passo a passo necessário."
     },
     {
         id: 3,
-        pergunta: "Preciso de algum conhecimento prévio?",
-        resposta: "Não, o curso é voltado para iniciantes."
+        pergunta: "Por quanto tempo tenho acesso?",
+        resposta: "O acesso é vitalício! Você poderá assistir e revisitar o conteúdo quando quiser."
     },
     {
         id: 4,
-        pergunta: "Como faço para tirar dúvidas?",
-        resposta: "Você pode tirar dúvidas através do nosso fórum ou grupo no WhatsApp."
+        pergunta: "Quais formas de pagamento são aceitas?",
+        resposta: "Aceitamos cartão de crédito, PIX e boleto bancário."
+    }
+    ,
+    {
+        id: 5,
+        pergunta: "O que preciso para executar as ferramentas do treinamento?",
+        resposta: "Apenas um computador e um celular com acesso a Internet."
+    },
+    {
+        id: 6,
+        pergunta: "Tem suporte durante o curso?",
+        resposta: "Sim! Oferecemos suporte via e-mail pela própria plataforma, além de um grupo informativo no whatsapp e lives mensais de dúvidas no instagram."
     }
 ]
 

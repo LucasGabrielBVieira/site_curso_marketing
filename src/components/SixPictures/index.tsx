@@ -88,10 +88,10 @@ function SixPictures() {
                     {[
                         { title: "Aulas 100% Gravadas e Práticas", content: "Aprenda no seu ritmo com aulas dinâmicas e diretas ao ponto, focadas em aplicação real no seu negócio. Assista quantas vezes quiser!" },
                         { title: "Materiais Exclusivos de Apoio", content: "Guias estratégicos, checklists e ferramentas para aplicar cada ensinamento na prática e acelerar seus resultados." },
-                        { title: "Suporte dos Suporte Direto e Comunidade", content: "Tire dúvidas e interaja com outros empreendedores dentro de uma comunidade ativa, recebendo suporte para cada etapa da sua jornada." },
+                        { title: "Suporte Direto", content: "Tire dúvidas e interaja recebendo suporte para cada etapa da sua jornada." },
                         { title: "Exercícios Execução Passo a Passo", content: "Nada de teoria vazia! Cada módulo tem tarefas práticas para você estruturar, posicionar e expandir seu negócio com estratégias testadas." },
                         { title: "Estratégias Validadas para Vendas", content: "Aprenda técnicas de tráfego pago e gratuito, copywriting e persuasão para transformar seguidores e visitantes em clientes reais." },
-                        { title: "Ferramentas Atualizadas do Mercado", content: "Domine as melhores ferramentas, como ChatGPT, Canva, Meta Ads, Notion e muito mais, para otimizar e automatizar seu crescimento." }
+                        { title: "Ferramentas Atualizadas do Mercado", content: "Domine as melhores ferramentas para otimizar e automatizar seu crescimento." }
                     ].map((item, index) => (
                         <motion.div
                             key={index}

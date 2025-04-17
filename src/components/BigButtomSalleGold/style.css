@@ -1,3 +1,14 @@
+.container-big-buttom-salle-gold {
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    width: 100%;;
+}
+
+.a-gold {
+    height: 100px;
+}
+
 .big-buttom-salle-gold {
     display: flex;
     justify-content: center;
@@ -89,6 +100,22 @@
 
 .big-buttom-salle-gold:hover p span::after {
     width: 100%;
+}
+
+.promocao-txt-gold {
+    color: var(--background-color);
+}
+
+.promocao-txt-gold s {
+    color: var(--background-color);
+    font-weight: 400;
+}
+
+.promocao-txt-gold strong {
+    color: var(--background-color);
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--border-color);
 }
 
 /* Responsividade */

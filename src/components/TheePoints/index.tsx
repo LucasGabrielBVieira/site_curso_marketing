@@ -69,7 +69,7 @@ function TheePoints() {
                     <p>Ferramentas e estratégias com inteligência artificial</p>
                 </div>
                 <div className='three-points-txt'>
-                    <p className='three-points-txt-p1'>Você vai aprender a posicionar a sua empresa no mercado digital usando apenas o computador</p>
+                    <p className='three-points-txt-p1'>Você vai aprender a posicionar a sua empresa no mercado digital usando apenas um computador e um celular</p>
                     <p className='three-points-txt-p2'>Ensinamos várias ferramentas para turbinar seu marketing de forma prática e fácil</p>
                 </div>
             </div>

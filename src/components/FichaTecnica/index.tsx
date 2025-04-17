@@ -52,7 +52,7 @@ const FichaTecnica: FC = () => {
             variants={containerVariants}
         >
             <h3>Informações</h3>
-            <h4>Requitos</h4>
+            <h4>Requisitos</h4>
             <div className="ficha-tecnica-content">
                 <h5>Para quem é o Treinamento?</h5>
                 <ul>
@@ -61,12 +61,12 @@ const FichaTecnica: FC = () => {
                     <li>COMERCIANTES LOCAIS</li>
                     <li>INFOPRODUTORES</li>
                     <li>DONOS DE PEQUENOS NEGÓCIOS</li>
-                    <li>PEQUENAS EMPRESAS</li>
                     <li>EMPREENDEDORES NO GERAL</li>
                 </ul>
                 <h5>PRÉ-REQUISITOS</h5>
                 <ul>
-                    <li>OBTER UM COMPUTADOR OU NOTBOOK DE ESCRITÓRIO PARA EXECUÇÃO DAS FERRAMENTAS E ACESSO AS MESMAS</li>
+                    <li>OBTER UM COMPUTADOR OU NOTEBOOK DE ESCRITÓRIO PARA EXECUÇÃO DAS FERRAMENTAS E ACESSO AS MESMAS</li> 
+                    <li>OBTER UM CELULAR PARA GERENCIAMENTO DE REDES SOCIAS</li>
                 </ul>
                 <h5>O QUE VOCÊ VAI APRENDER</h5>
                 <ul>
