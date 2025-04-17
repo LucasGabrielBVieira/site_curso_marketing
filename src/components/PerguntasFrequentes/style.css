@@ -1,3 +1,4 @@
+
 .container-perguntas-frequentes {
     display: flex;
     justify-content: space-evenly;
@@ -191,7 +192,7 @@
     }
 
     .container-perguntas-header {
-        width: 90%;
+        width: 100%;
         max-width: 600px;
         padding: 12px 15px;
         border-radius: 50px;
