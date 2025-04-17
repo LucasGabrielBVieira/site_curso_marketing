@@ -23,68 +23,83 @@
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* Efeito de ondulação ao clicar */
-.big-buttom-salle::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 10.01%);
-    background-repeat: no-repeat;
-    background-position: 50%;
-    transform: scale(10, 10);
-    opacity: 0;
-    transition: transform 0.5s, opacity 0.8s;
-}
-
-.big-buttom-salle:active::after {
-    transform: scale(0, 0);
-    opacity: 0.3;
-    transition: 0s;
-}
-
-/* Efeito de brilho */
-.big-buttom-salle::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-        to right,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0.2) 50%,
-        rgba(255, 255, 255, 0) 100%
-    );
-    transform: rotate(45deg);
-    animation: shimmer 3.5s infinite;
-    pointer-events: none;
-}
-
-@keyframes shimmer {
-    0% {
-        transform: translateX(-150%) rotate(45deg);
+/* Efeito de ondulação ao clicar - apenas para desktop */
+@media (min-width: 790px) {
+    .big-buttom-salle::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        background-image: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 10.01%);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        transform: scale(10, 10);
+        opacity: 0;
+        transition: transform 0.5s, opacity 0.8s;
     }
-    100% {
-        transform: translateX(150%) rotate(45deg);
+
+    .big-buttom-salle:active::after {
+        transform: scale(0, 0);
+        opacity: 0.3;
+        transition: 0s;
     }
 }
 
-.big-buttom-salle:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
-                0 0 15px var(--secondary-color);
-    transition: all 0.3s ease;
+/* Efeito de brilho - apenas para desktop */
+@media (min-width: 790px) {
+    .big-buttom-salle::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        transform: rotate(45deg);
+        animation: shimmer 3.5s infinite;
+        pointer-events: none;
+    }
+
+    @keyframes shimmer {
+        0% {
+            transform: translateX(-150%) rotate(45deg);
+        }
+        100% {
+            transform: translateX(150%) rotate(45deg);
+        }
+    }
 }
 
-.big-buttom-salle:active {
-    transform: translateY(1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+/* Versão mobile simples sem animação */
+@media (max-width: 789px) {
+    .big-buttom-salle:hover, .big-buttom-salle:active {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        transform: none;
+    }
+}
+
+/* Efeitos hover para desktop */
+@media (min-width: 790px) {
+    .big-buttom-salle:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+                    0 0 15px var(--secondary-color);
+        transition: all 0.3s ease;
+    }
+
+    .big-buttom-salle:active {
+        transform: translateY(1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    }
 }
 
 .big-buttom-salle p {
@@ -104,41 +119,52 @@
     display: inline-block;
 }
 
-/* Efeito de sublinhado animado */
-.big-buttom-salle p span::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: var(--background-color);
-    transition: width 0.3s ease;
-}
-
-.big-buttom-salle:hover p span::after {
-    width: 100%;
-}
-
-/* Animação de pulso para chamar atenção */
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+/* Efeito de sublinhado animado - apenas para desktop */
+@media (min-width: 790px) {
+    .big-buttom-salle p span::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--background-color);
+        transition: width 0.3s ease;
     }
-    50% {
-        transform: scale(1.03);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18),
-                    0 0 15px var(--secondary-color);
-    }
-    100% {
-        transform: scale(1);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+
+    .big-buttom-salle:hover p span::after {
+        width: 100%;
     }
 }
 
-.big-buttom-salle.pulse {
-    animation: pulse 2s infinite;
+/* Animação de pulso para chamar atenção - apenas para desktop */
+@media (min-width: 790px) {
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+        }
+        50% {
+            transform: scale(1.03);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18),
+                        0 0 15px var(--secondary-color);
+        }
+        100% {
+            transform: scale(1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+        }
+    }
+
+    .big-buttom-salle.pulse {
+        animation: pulse 2s infinite;
+    }
+}
+
+/* Versão sem pulso para mobile */
+@media (max-width: 789px) {
+    .big-buttom-salle.pulse {
+        animation: none;
+    }
 }
 
 /* Media queries para responsividade */

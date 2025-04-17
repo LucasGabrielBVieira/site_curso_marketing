@@ -1,5 +1,4 @@
-import { useState, useRef, useEffect, FC } from "react";
-import { motion, useAnimation, AnimationControls, Variants } from 'framer-motion';
+import { useState, FC } from "react";
 import "./style.css";
 import BigButtomSalleGold from "../BigButtomSalleGold";
 
@@ -35,8 +34,6 @@ const modulos: Modulo[] = [
 const PerguntasFrequentes: FC = () => {
     const [activeModuleId, setActiveModuleId] = useState<number | null>(null);
     const [isActive, setIsActive] = useState(false);
-    const ref = useRef<HTMLDivElement>(null);
-    const controls: AnimationControls = useAnimation();
 
     // Função para alternar o estado de um módulo específico
     const toggleModule = (moduleId: number) => {
@@ -48,52 +45,9 @@ const PerguntasFrequentes: FC = () => {
         });
     };
 
-    // Check if element is in view for animation
-    useEffect(() => {
-        const checkIfInView = (): void => {
-            if (!ref.current) return;
-            const element: HTMLDivElement = ref.current;
-            const rect: DOMRect = element.getBoundingClientRect();
-            const windowHeight: number = window.innerHeight;
-            
-            // If the top of the element is in view
-            if (rect.top <= windowHeight * 0.75) {
-                controls.start("visible");
-            }
-        };
-        
-        window.addEventListener("scroll", checkIfInView);
-        // Check once on mount
-        checkIfInView();
-        
-        return () => {
-            window.removeEventListener("scroll", checkIfInView);
-        };
-    }, [controls]);
-
-    // Animation variants - apenas fade in, sem movimento
-    const containerVariants: Variants = {
-        hidden: { 
-            opacity: 0
-        },
-        visible: {
-            opacity: 1,
-            transition: {
-                duration: 0.8,
-                ease: "easeOut"
-            }
-        }
-    };
-
     return (
         <>
-        <motion.div 
-            className="container-perguntas-frequentes"
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={containerVariants}
-        >
+        <div className="container-perguntas-frequentes">
             <h3>Perguntas Frequentes</h3>
             <div className="container-perguntas-frequentes-containt">
                 {modulos.map((modulo) => (
@@ -119,7 +73,7 @@ const PerguntasFrequentes: FC = () => {
                 ))}
             </div>
             
-        </motion.div>
+        </div>
         <div className="container-perguntas-frequentes-btn">
             <BigButtomSalleGold/>
         </div>
