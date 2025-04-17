@@ -169,8 +169,7 @@
     }
 
     .container-modulo-header-icon span::before {
-        font-size: 18px;
-        padding: 8px;
+        display: none;
     }
 
     .container-modulo-aulas ul {
