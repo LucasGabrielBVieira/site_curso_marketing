@@ -1,3 +1,4 @@
+/* style.css */
 .boas-vindas {
     background-color: var(--background-color);
     position: relative;
@@ -16,20 +17,53 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     height: 70vh;
-    
-}
+  }
 
-.boas-vindas-txt {
+  .promocao-txt-p {
+    text-align: center;
+  }
+  
+  .boas-vindas-txt {
     max-width: 950px;
-}
-
-.promocao-txt {
+    text-align: left;
+  }
+  
+  /* Classes de margem mantidas do original */
+  .mg40-top {
+    margin-top: 40px;
+  }
+  
+  .mg40-bottom {
+    margin-bottom: 40px;
+  }
+  
+  /* Nova lista de benefícios */
+  .beneficios-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .beneficios-lista li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .beneficios-lista li::before {
+    content: "🔹";
+    position: absolute;
+    left: 0;
+  }
+  
+  .promocao-txt {
     margin-top: 8px;
     font-size: 20px;
     font-weight: 600;
-}
-
-.img-logo {
+  }
+  
+  .img-logo {
     width: 800px;
     height: 200px;
      
@@ -37,9 +71,9 @@
         max-width: 600px;
         width: 100%;
     }
-}
-
-.img-icone{
+  }
+  
+  .img-icone{
     display: inline-block;
     bottom: -5px;
     right: -10px;
@@ -47,44 +81,69 @@
     width: 30px;
     height: 30px;
     margin-right: 10px;
-}
-
-@media(max-width: 1024px) {
+  }
+  
+  @media(max-width: 1024px) {
     .boas-vindas {
         padding: 50px;
-        height: 60vh;
+        height: auto;
+        min-height: 60vh;
         display: flex;
         flex-direction: column-reverse;
         justify-content: space-around;
     }
+    
+    .boas-vindas-txt {
+        width: 100%;
+    }
+    
     .promocao-txt {
         margin-top: 8px;
         font-size: 16px;
         font-weight: 600;
     }
+    
     h1 {
         font-size: 26px;
-        text-align: center;
+        text-align: left
     }
-}
-
-
-/* Celulares */
-@media (max-width: 768px) {
+    
+    .mg40-top, .mg40-bottom {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+  }
+  
+  /* Tablets */
+  @media (max-width: 900px) {
+    .boas-vindas {
+        grid-template-columns: 1fr;
+    }
+    
+    .img-logo {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        margin-bottom: 30px;
+    }
+  }
+  
+  /* Celulares */
+  @media (max-width: 768px) {
     .boas-vindas {
         padding: 30px 20px;
-        border-radius: 0;
-        min-height: auto;
         gap: 20px;
     }
     
-    .boas-vindas-txt {
-        text-align: center;
+    .beneficios-lista {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
     }
     
     h1 {
         font-size: 22px;
-        margin-bottom: 20px !important;
     }
     
     .img-logo {
@@ -106,10 +165,10 @@
     .promocao-txt {
         font-size: 14px;
     }
-}
-
-/* Celulares pequenos */
-@media (max-width: 480px) {
+  }
+  
+  /* Celulares pequenos */
+  @media (max-width: 480px) {
     .boas-vindas {
         padding: 20px 15px;
     }
@@ -126,4 +185,9 @@
         width: 20px;
         height: 20px;
     }
-}
+    
+    .beneficios-lista li {
+        font-size: 14px;
+        padding-left: 25px;
+    }
+  }

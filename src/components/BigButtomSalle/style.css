@@ -1,3 +1,9 @@
+.a-big-buttom-salle {
+    width: 100%;
+    max-width: 650px;
+    text-decoration: none;
+}
+
 .big-buttom-salle {
     display: flex;
     justify-content: center;
@@ -11,9 +17,7 @@
     color: var(--background-color);
     cursor: pointer;
     margin-top: 20px;
-    margin-bottom: 50px;
     text-align: center;
-    position: relative;
     overflow: hidden;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -141,7 +145,6 @@
 @media (max-width: 768px) {
     .big-buttom-salle {
         height: 55px;
-        margin-bottom: 40px;
         max-width: 90%;
     }
     

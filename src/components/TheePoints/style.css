@@ -8,6 +8,8 @@
     gap: 20px;
     padding-top: 50px;
     padding-bottom: 30px;
+    position: relative;
+    overflow: hidden;
 }
 
 .container-moldura {
@@ -20,61 +22,158 @@
     font-size: 16px;
     font-weight: 800;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    padding-top: 5px;
 }
 
 .container-moldura img {
     width: 60px;
     height: 60px;
+    transition: transform 0.5s ease, filter 0.5s ease;
 }
 
+.container-moldura h6 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0 0 0;
+    cursor: default;
+}
+
+.container-moldura p {
+    transition: transform 0.3s ease;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 0px;
+    cursor: default;
+}
+
+/* Animações base para todos os quadros */
+.container-moldura::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.container-moldura:hover::before {
+    left: 100%;
+    transition: all 0.8s ease;
+}
+
+.container-moldura:hover img {
+    transform: rotate(360deg) scale(1.2);
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.8));
+}
+
+.container-moldura:hover p {
+    transform: translateY(5px);
+}
+
+/* Estilo específico para cada quadro */
 .point-1 {
     border: var(--primary-color) 2px solid;
     color: var(--primary-color);
     box-shadow: none;
-    transition: all 0.3s ease;
-    transform: scale(1.05);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: pulse-primary 3s infinite alternate;
 }
 
 .point2 {
     border: var(--secondary-color) 2px solid;
     color: var(--secondary-color);
     box-shadow: none;
-    transition: all 0.3s ease;
-    transform: scale(1.05);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: pulse-secondary 3.5s infinite alternate;
 }
 
 .point3 {
     border: var(--border-color) 2px solid;
     color: var(--border-color);
     box-shadow: none;
-    transition: all 0.3s ease;
-    transform: scale(1.05);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: pulse-border 4s infinite alternate;
 }
 
+/* Animações de pulsação para cada quadro */
+@keyframes pulse-primary {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(var(--primary-color-rgb), 0.2);
+    }
+    70% {
+        transform: scale(1.03);
+        box-shadow: 0 0 0 10px rgba(var(--primary-color-rgb), 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(var(--primary-color-rgb), 0);
+    }
+}
+
+@keyframes pulse-secondary {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(var(--secondary-color-rgb), 0.2);
+    }
+    70% {
+        transform: scale(1.03);
+        box-shadow: 0 0 0 10px rgba(var(--secondary-color-rgb), 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(var(--secondary-color-rgb), 0);
+    }
+}
+
+@keyframes pulse-border {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(var(--border-color-rgb), 0.2);
+    }
+    70% {
+        transform: scale(1.03);
+        box-shadow: 0 0 0 10px rgba(var(--border-color-rgb), 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(var(--border-color-rgb), 0);
+    }
+}
+
+/* Efeitos de hover aprimorados */
 .point-1:hover {
     background-color: var(--primary-color);
     color: #FFF;
-    box-shadow: var(--primary-color) 0px 0px 10px;
-    transition: all 0.3s ease;
-    transform: scale(1.05);
+    box-shadow: var(--primary-color) 0px 0px 15px;
+    transform: translateY(-10px) scale(1.05);
+    animation: none;
 }
 
 .point2:hover {
     background-color: var(--secondary-color);
     color: #FFF;
-    box-shadow: var(--secondary-color) 0px 0px 10px;
-    transition: all 0.3s ease;
-    transform: scale(1.05);
+    box-shadow: var(--secondary-color) 0px 0px 15px;
+    transform: translateY(-10px) scale(1.05);
+    animation: none;
 }
 
 .point3:hover {
     background-color: var(--border-color);
     color: #FFF;
-    box-shadow: var(--border-color) 0px 0px 10px;
-    transition: all 0.3s ease;
-    transform: scale(1.05);
+    box-shadow: var(--border-color) 0px 0px 15px;
+    transform: translateY(-10px) scale(1.05);
+    animation: none;
 }
 
+/* Animação para o texto */
 .three-points-txt {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -86,6 +185,37 @@
     background-color: #FFF;
     font-size: 14px;
     color: var(--secondary-color);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-in 1s ease forwards 0.5s;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.three-points-txt p {
+    position: relative;
+    padding-left: 25px;
+}
+
+.three-points-txt p::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 .three-points-txt-p1 {
@@ -106,8 +236,8 @@
 
 @media (max-width: 1024px) {
     .container-moldura {
-        width: 200px;
-        height: 100px;
+        width: 250px;
+        height: 150px;
         font-size: 12px;
     }
     .container-moldura img {
@@ -138,6 +268,15 @@
         grid-column-end: 2;
         padding: 25px 10px 0;
         gap: 15px;
+    }
+    
+    /* Desative algumas animações em dispositivos menores para melhor desempenho */
+    .container-moldura::before {
+        display: none;
+    }
+    
+    .point-1, .point2, .point3 {
+        animation: none;
     }
 }
 

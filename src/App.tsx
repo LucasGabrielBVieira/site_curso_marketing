@@ -28,7 +28,7 @@ function App() {
       <div>
         <ConteudoCurso />
       </div>
-      <div>
+      <div className='container-description-bruno'>
         <DescriptionBruno />
       </div>
       <div className='container-perguntas-frequentes-content'>

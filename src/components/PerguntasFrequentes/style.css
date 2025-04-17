@@ -7,7 +7,6 @@
     gap: 20px;
     padding: 20px;
     height: auto;
-    min-height: 60vh;
     margin: 0 auto;
 }
 
@@ -19,9 +18,7 @@
     max-width: 400px;
 }
 
-.container-perguntas-frequentes-containt {
-    flex: 1;
-}
+
 
 .container-perguntas-header {
     display: flex;
