@@ -79,7 +79,7 @@ const DescriptionBruno: React.FC = () => {
                     </motion.p>
                 </div>
 
-                <motion.div
+                <motion.div className='img-bruno-container'
                     style={{
                         opacity: imgOpacity,
                     }}

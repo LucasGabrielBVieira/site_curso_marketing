@@ -2,31 +2,116 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 680px;
+    width: 100%;
+    max-width: 680px;
     height: 60px;
-    border-radius: 10px;
-    background-color: var(--primary-color);
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--border-color) 100%);
     border: var(--border-color) 2px solid;
-    box-shadow: var(--secondary-color) 0px 0px 2px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     color: var(--background-color);
     cursor: pointer;
-    margin-top: 20px;
-    margin-bottom: 50px;
+    margin: 20px auto 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Efeito de brilho animado */
+.big-buttom-salle-gold::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(45deg);
+    animation: shimmer 3s infinite;
+    pointer-events: none;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-150%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(150%) rotate(45deg);
+    }
 }
 
 .big-buttom-salle-gold:hover {
-    transform: scale(1.01);
-    transition: all 0.1s ease;  
-    box-shadow: var(--primary-color) 0px 0px 10px;
-    background-color: var(--border-color);
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2),
+                0 0 15px var(--primary-color);
+    background: linear-gradient(135deg, var(--border-color) 0%, var(--primary-color) 100%);
+}
+
+.big-buttom-salle-gold:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .big-buttom-salle-gold p {
     font-size: 18px;
     font-weight: 600;
     color: var(--background-color);
+    position: relative;
+    z-index: 2;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+    padding: 0 15px;
 }
 
 .big-buttom-salle-gold p span {
     font-weight: 800;
+    position: relative;
+    display: inline-block;
+}
+
+.big-buttom-salle-gold p span::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--background-color);
+    transition: width 0.3s ease;
+}
+
+.big-buttom-salle-gold:hover p span::after {
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .big-buttom-salle-gold {
+        height: 55px;
+        max-width: 90%;
+        border-radius: 10px;
+    }
+    
+    .big-buttom-salle-gold p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .big-buttom-salle-gold {
+        height: 50px;
+        max-width: 95%;
+        margin: 15px auto 40px;
+    }
+    
+    .big-buttom-salle-gold p {
+        font-size: 15px;
+    }
 }

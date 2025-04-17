@@ -29,3 +29,13 @@
     box-shadow: var(--primary-color) 0px 0px 3px;
     background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
 }
+
+@media (max-width: 768px) {
+    .div-buttom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+

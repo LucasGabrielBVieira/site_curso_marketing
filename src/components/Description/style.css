@@ -1,27 +1,42 @@
 .section-description {
     background-color: var(--primary-color);
-    position: relative;
-    bottom: -162px;
-    height: 100vh;
+    margin-bottom: -21px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 20px;
+    padding: 30px 20px;
+    overflow: hidden;
+    width: 100%;
 }
 
 .container-description {
-    max-width: 1200px;
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+}
+
+.container-description-text {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.container-description-image {
+    flex: 0 0 45%;
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    gap: 100px;
-    margin: 0 auto;
+    align-items: center;
 }
 
 .container-description h2 {
     font-size: 36px;
     font-weight: 800;
     color: var(--background-color);
+    margin: 0 0 20px 0;
+    line-height: 1.2;
 }
 
 .container-description h2 div {
@@ -32,36 +47,88 @@
     display: inline-flex;
     width: 500px;
     justify-content: center;
-    padding-bottom: 5px;
+    padding: 5px 10px;
+    max-width: 100%;
 }
 
 .container-description span {
     font-size: 18px;
     font-weight: 400;
+    line-height: 1.5;
 }
 
 .container-description p {
     font-size: 18px;
     font-weight: 400;
     color: var(--background-color);
+    line-height: 1.5;
+    margin-bottom: 15px;
 }
 
 .description-txt div {
     display: inline;
     font-size: 18px;
     font-weight: 600;
+    line-height: 1.5;
 }
 
 .container-description img {
-    width: 600px;
+    width: 100%;
+    min-width: 675px;
+    max-width: 100%;
     border-radius: 10px;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), 50%, rgba(0, 0, 0, 0) 90%); /* Para navegadores WebKit */ /* Para navegadores WebKit */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), 50%, rgba(0, 0, 0, 0) 90%);
     mask-mode: alpha;
+    height: auto;
+    object-fit: contain;
 }
 
+/* Telas grandes */
+@media (min-height: 1000px) {
+    .section-description {
+        padding: 10px 20px;
+    }
+}
+
+/* Telas muito grandes */
+@media (min-height: 1200px) {
+    .section-description {
+        padding: 120px 20px;
+    }
+    
+    .container-description {
+        gap: 80px;
+    }
+    
+    .container-description h2 {
+        font-size: 42px;
+    }
+    
+    .container-description h2 div {
+        font-size: 42px;
+        width: 550px;
+    }
+    
+    .container-description span,
+    .container-description p,
+    .description-txt div {
+        font-size: 20px;
+    }
+}
+
+/* Telas médias */
 @media (max-width: 1500px) {
+    .container-description-text {
+        flex: 0 0 55%;
+        max-width: 55%;
+    }
+    
+    .container-description-image {
+        flex: 0 0 40%;
+    }
+    
     .container-description img {
-        width: 500px;
+        min-width: 500px;
     }
 
     .container-description h2 {
@@ -76,41 +143,179 @@
     .container-description span {
         font-size: 16px;
     }
+
     .container-description p {
         font-size: 16px;
     }
+
     .description-txt div {
         font-size: 16px;
     }
-    .container-description {
-        gap: 50px;
-    }
 }
 
+/* Telas menores */
 @media (max-width: 1250px) {
     .container-description {
-        max-width: 1000px
+        max-width: 1000px;
     }
+    
+    .container-description-text {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+    
+    .container-description-image {
+        flex: 0 0 35%;
+    }
+
     .container-description img {
-        width: 400px;
+        min-width: 400px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .section-description {
+        padding: 60px 20px;
+        height: auto;
+        min-height: 90vh;
+        top: -30px;
+        margin-bottom: -30px;
     }
 
-    .container-description h2 {
-        font-size: 28px;
+    .container-description {
+        max-width: 768px;
+        gap: 30px;
     }
-
-    .container-description h2 div {
-        font-size: 28px;
-        width: 400px;
+    
+    .container-description-text {
+        flex: 0 0 55%;
+        max-width: 55%;
+    }
+    
+    .container-description-image {
+        flex: 0 0 40%;
     }
 
     .container-description span {
-        font-size: 16px;
+        font-size: 14px;
     }
+
     .container-description p {
-        font-size: 16px;
+        font-size: 14px;
     }
+
     .description-txt div {
-        font-size: 16px;
+        font-size: 14px;
+    }
+
+    .container-description h2 {
+        font-size: 24px;
+    }
+
+    .container-description h2 div {
+        font-size: 24px;
+        width: 350px;
+    }
+
+    .container-description img {
+        display: none;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .section-description {
+        padding: 0px 15px;
+        margin: 0;
+        display: none;
+    }
+    
+    .container-description {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .container-description-text,
+    .container-description-image {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .container-description-image {
+        order: -1;
+    }
+    
+    .container-description img {
+        display: none;
+    }
+    
+    .container-description h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    .container-description h2 div {
+        font-size: 22px;
+        width: 100%;
+        padding: 5px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    .section-description {
+        padding: 40px 10px;
+        top: -15px;
+        margin-bottom: -15px;
+    }
+    
+    .container-description h2 {
+        font-size: 20px;
+    }
+    
+    .container-description h2 div {
+        font-size: 20px;
+    }
+    
+    .container-description span,
+    .container-description p,
+    .description-txt div {
+        font-size: 13px;
+    }
+}
+
+/* Telas muito baixas */
+@media (max-height: 700px) {
+    .section-description {
+        padding: 40px 15px;
+        min-height: auto;
+    }
+    
+    .container-description {
+        gap: 30px;
+    }
+    
+    .container-description img {
+        max-height: 300px;
+    }
+}
+
+/* Telas extremamente baixas */
+@media (max-height: 500px) {
+    .section-description {
+        padding: 30px 10px;
+    }
+    
+    .container-description {
+        gap: 20px;
+    }
+    
+    .container-description p {
+        margin-bottom: 10px;
+    }
+    
+    .container-description img {
+        max-height: 200px;
     }
 }

@@ -5,20 +5,18 @@
     align-items: center;
     flex-direction: column;
     max-width: 1500px;
+    width: 100%;
     margin: 0 auto;
-    position: relative;
-    bottom: -151px;
+    padding: 0 15px;
 }
 
 .container-conteudo-curso-containt {
     background-color: var(--background-color);
     display: flex;
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     flex-direction: column;
-    max-width: 1500px;
     margin: 0 auto;
-    position: relative;
-    bottom: -11px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     margin-bottom: 30px;
@@ -26,20 +24,25 @@
 
 .container-modulo {
     border-bottom: none;
-    background-color: var(background-color);
+    background-color: var(--background-color);
 }
+
 .container-conteudo-curso h3 {
     margin-bottom: 5px;
     margin-top: 50px;
     font-size: 18px;
     color: var(--primary-color);
+    text-align: center;
 }
+
 .container-conteudo-curso h4 {
-    color: var(--secondary-colo);
+    color: var(--secondary-color);
     font-size: 28px;
     font-weight: 800;
     margin: 0;
     margin-bottom: 40px;
+    text-align: center;
+    padding: 0 10px;
 }
 
 .container-modulo-header h5 {
@@ -79,18 +82,24 @@
     color: #FFF;
 }
 
-container-modulo-header-icon {
+.container-modulo-header.active p {
+    color: #FFF;
+}
+
+.container-modulo-header-icon {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 30px;
 }
 
 .container-modulo-header-icon span::before {
     content: "⮟";
-    padding: 20px;
+    padding: 10px;
     font-size: 20px;
     color: var(--primary-color);
 }
+
 .container-modulo-header-icon.active span::before {
     content: "⮝";
     transition: transform 0.3s ease;
@@ -103,11 +112,8 @@ container-modulo-header-icon {
     border: var(--primary-color) 2px solid;
 }
 
-
-
 .container-modulo-aulas.open {
     max-height: 500px;
-    /* Altura máxima suficiente para o conteúdo */
     opacity: 1;
     transition: all 0.3s ease;
     overflow: hidden;
@@ -135,13 +141,87 @@ container-modulo-header-icon {
     opacity: 0;
     transition: all 0.3s ease;
 }
-/* Estilo para o cabeçalho do módulo ativo 
 
-  
-  
-  
-  .container-modulo-header {
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-*/
+@media(max-width: 1024px) {
+    .container-conteudo-curso {
+        top: -60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-conteudo-curso h4 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .container-modulo-header {
+        padding: 12px 15px;
+    }
+
+    .container-modulo-header h5 {
+        font-size: 18px;
+    }
+
+    .container-modulo p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .container-modulo-header-icon span::before {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    .container-modulo-aulas ul {
+        padding: 15px;
+    }
+
+    .container-modulo-aulas ul li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-conteudo-curso h3 {
+        font-size: 16px;
+        margin-top: 40px;
+    }
+
+    .container-conteudo-curso h4 {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .container-modulo-header {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        padding: 15px 12px;
+    }
+
+    .container-modulo-header-icon {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+    }
+
+    .container-modulo-header h5 {
+        font-size: 16px;
+        margin-right: 30px;
+    }
+
+    .container-modulo p {
+        font-size: 13px;
+        margin-top: 5px;
+        margin-right: 30px;
+    }
+    
+    .container-modulo-aulas.open {
+        max-height: 600px;
+    }
+    
+    .container-modulo-aulas ul li {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+}

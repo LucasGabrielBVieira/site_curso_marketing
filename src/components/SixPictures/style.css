@@ -13,9 +13,6 @@ h3 {
     background-color: #FFF;
     gap: 20px;
     max-width: 1500px;
-    margin: 0 auto;
-    position: relative;
-    bottom: -11px;
     padding: 20px;
 }
 
@@ -24,7 +21,6 @@ h3 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 60px;
-    height: 60vh;
 }
 
 .container-six-pictures-grid div {
@@ -50,4 +46,47 @@ h3 {
     color: var(--secondary-color);
     font-size: 14px;
     font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .container-six-pictures-content {
+        top: -180px;
+    }
+}
+
+/* Estilos para tablets */
+@media (max-width: 1024px) {
+    .container-six-pictures-content {
+        padding: 15px;
+        bottom: 0;
+    }
+    
+    .container-six-pictures-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .container-six-pictures-grid h4 {
+        font-size: 16px;
+    }
+}
+
+/* Estilos para celulares */
+@media (max-width: 640px) {
+    h3 {
+        font-size: 20px;
+    }
+    
+    .container-six-pictures-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .container-six-pictures-content {
+        padding: 10px;
+    }
+    
+    .container-six-pictures-grid div {
+        padding: 15px;
+    }
 }

@@ -49,4 +49,81 @@
     margin-right: 10px;
 }
 
+@media(max-width: 1024px) {
+    .boas-vindas {
+        padding: 50px;
+        height: 60vh;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+    }
+    .promocao-txt {
+        margin-top: 8px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    h1 {
+        font-size: 26px;
+        text-align: center;
+    }
+}
 
+
+/* Celulares */
+@media (max-width: 768px) {
+    .boas-vindas {
+        padding: 30px 20px;
+        border-radius: 0;
+        min-height: auto;
+        gap: 20px;
+    }
+    
+    .boas-vindas-txt {
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 22px;
+        margin-bottom: 20px !important;
+    }
+    
+    .img-logo {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    
+    .img-icone {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .mg40-top, .mg40-bottom {
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .promocao-txt {
+        font-size: 14px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    .boas-vindas {
+        padding: 20px 15px;
+    }
+    
+    h1 {
+        font-size: 18px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+    
+    .img-icone {
+        width: 20px;
+        height: 20px;
+    }
+}

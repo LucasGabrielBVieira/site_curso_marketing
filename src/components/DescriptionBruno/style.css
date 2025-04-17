@@ -3,13 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    bottom: -151px;
-    width: 99.2vw;
+    width: 100%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .container-descriptionBruno {
@@ -17,6 +12,18 @@
     display: flex;
     flex-direction: row;
     gap: 200px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.text-container {
+    flex: 1;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container-descriptionBruno h2 {
@@ -30,6 +37,7 @@
     font-size: 18px;
     font-weight: 400;
     color: var(--background-color);
+    margin-bottom: 20px;
 }
 
 .container-descriptionBruno img {
@@ -40,6 +48,7 @@
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), 80%, rgba(0, 0, 0, 0) 98%);
 }
 
+/* Telas grandes (desktop) */
 @media (max-width: 1500px) {
     .container-descriptionBruno {
         max-width: 1100px;
@@ -59,6 +68,7 @@
     }
 }
 
+/* Desktops menores e tablets grandes */
 @media (max-width: 1250px) {
     .container-descriptionBruno {
         max-width: 900px;
@@ -75,5 +85,136 @@
     
     .container-descriptionBruno img {
         width: 300px;
+    }
+}
+
+/* Tablets médios */
+@media (max-width: 1024px) {
+    .section-descriptionBruno {
+        bottom: 0px;
+        top: -60px;
+        height: auto;
+        min-height: 80vh;
+        padding: 40px 0;
+    }
+    
+    .container-descriptionBruno {
+        gap: 80px;
+    }
+    
+    .container-descriptionBruno h2 {
+        margin-top: 50px;
+        font-size: 32px;
+    }
+}
+
+/* Tablets pequenos e celulares grandes */
+@media (max-width: 860px) {
+    .container-descriptionBruno {
+        flex-direction: column;
+        gap: 50px;
+        max-width: 600px;
+    }
+    
+    .text-container {
+        order: 1;
+        width: 100%;
+    }
+    
+    .image-container {
+        order: 2;
+        width: 100%;
+    }
+    
+    .container-descriptionBruno h2 {
+        margin-top: 20px;
+        font-size: 32px;
+        text-align: center;
+    }
+    
+    .descriptionBruno-txt p {
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .container-descriptionBruno img {
+        width: 80%;
+    }
+    
+    .section-descriptionBruno {
+        height: auto;
+        padding: 60px 0;
+    }
+    .img-bruno-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Celulares médios */
+@media (max-width: 640px) {
+    .container-descriptionBruno {
+        gap: 30px;
+        padding: 0 15px;
+    }
+    
+    .container-descriptionBruno h2 {
+        font-size: 28px;
+        margin-top: 10px;
+    }
+    
+    .descriptionBruno-txt p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    
+    .container-descriptionBruno img {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    .section-descriptionBruno {
+        padding: 40px 0;
+    }
+    
+    .container-descriptionBruno {
+        gap: 25px;
+        padding: 0 12px;
+    }
+    
+    .container-descriptionBruno h2 {
+        font-size: 24px;
+        margin-top: 0;
+    }
+    
+    .descriptionBruno-txt p {
+        font-size: 14px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+    
+    .container-descriptionBruno img {
+        width: 200px;
+        align-items: center;
+    }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 360px) {
+    .container-descriptionBruno h2 {
+        font-size: 22px;
+    }
+    
+    .descriptionBruno-txt p {
+        font-size: 13px;
+    }
+    
+    .container-descriptionBruno img {
+        width: 180px;
+        align-items: center;
     }
 }

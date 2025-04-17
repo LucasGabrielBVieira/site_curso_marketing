@@ -15,6 +15,10 @@ body {
     color: var(--secondary-color);
     margin: 0;
     padding: 0;
+    
+    @media(max-width: 1024px) {
+        background-color: var(--primary-color);
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -35,12 +39,10 @@ span {
     background-color: var(--background-color);
     max-width: 1500px;
     margin: 0 auto;
-    height: 100vh;
+    height: 100%;
 }
 
 .container-perguntas-frequentes-content {
-    position: relative;
-    bottom: -151px;
     background-color: var(--primary-color);
 }
 
@@ -56,6 +58,7 @@ h1 {
 }
 
 .container-six-pictures {
+    background-color: #FFF;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,14 +66,21 @@ h1 {
     gap: 20px;
     max-width: 1500px;
     margin: 0 auto;
-    position: relative;
-    bottom: -151px;
+    padding-bottom: 40px;
 }
 
 .mg40-top {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .mg40-bottom {
     margin-bottom: 40px;
+}
+
+@media (max-width: 1024px) {
+
+    .container-perguntas-frequentes-content {
+        background-color: var(--primary-color);
+    }
+
 }

@@ -1,15 +1,11 @@
 .container-three-points {
     background-color: #FFF;
-    position: relative;
-    z-index: 1;
-    top: -21px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     align-items: center;
     justify-items: center;
     gap: 20px;
-    max-width: 1500px;
     padding-top: 50px;
     padding-bottom: 30px;
 }
@@ -103,7 +99,79 @@
 @media (max-width: 1250px) {
     .three-points-txt {
         display: flex;
-        gap:10px;
+        gap: 10px;
         flex-direction: column;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container-moldura {
+        width: 200px;
+        height: 100px;
+        font-size: 12px;
+    }
+    .container-moldura img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Tablets pequenos e celulares */
+@media (max-width: 768px) {
+    .container-three-points {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        gap: 15px;
+        padding: 40px 15px 20px;
+    }
+    
+    .container-moldura {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        min-height: 100px;
+        padding: 15px;
+    }
+    
+    .three-points-txt {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        padding: 25px 10px 0;
+        gap: 15px;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    .container-three-points {
+        top: -10px;
+        padding: 30px 10px 15px;
+        gap: 10px;
+    }
+    
+    .container-moldura {
+        max-width: 250px;
+        min-height: 90px;
+        transform: scale(1);
+    }
+    
+    .container-moldura img {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 5px;
+    }
+    
+    .container-moldura p {
+        font-size: 11px;
+    }
+    
+    .three-points-txt {
+        font-size: 12px;
+        padding: 20px 5px 0;
+        gap: 10px;
+    }
+    
+    .point-1:hover, .point2:hover, .point3:hover {
+        transform: scale(1.02);
     }
 }
