@@ -17,8 +17,8 @@ function App() {
       <main className="container">
         <Welcome />
         <TheePoints />
-        <Description />
       </main>
+      <Description />
       <div className='container-six-pictures'>
         <SixPictures />
       </div>
